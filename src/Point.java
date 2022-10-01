@@ -17,9 +17,7 @@ public class Point {
         this.y = 0;
     }
 
-    public int getX(){
-        return x;
-    }
+    public int getX(){return x; }
 
     public int getY(){
         return y;
@@ -41,18 +39,23 @@ public class Point {
         if (x > 0 && y > 0 ) {
             return "I";
         }
+        else if (x == 0 && y == 0) {
+            return "origin";
+        }
         else if (x < 0 && y > 0) {
             return "II";
         }
         else if (x < 0 && y < 0){
             return "III";
         }
-        else if (x == 0 && y == 0) {
-            return "origin";
-        }
-        
-        else if (//){
+        else if (x > 0 && y <0) {
             return "IV";
+        }
+        else if (x == 0 || y == 0) {
+            return "on an axis";
+        }
+        else {
+            return "error";
         }
     }
 
